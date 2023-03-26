@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/cd647ad91f.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Carrito</title>
+
+</head>
+<body>  
+    
+<!-- <div class="container"> -->
+
+   
+    <!-- Navbar -->
+    <div class="container bg-dark mt-3">
+        
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <h1 class="text-light ms-3">Autos</h1>
+                <div class="d-flex" id="container-total"></div>
+                <i class="fa-sharp fa-solid fa-cart-shopping fa-xl text-light me-5" ></i>
+               
+                
+                <div class="container-carrito">
+                  <table>
+                    <thead class="container-titulos-tabla">
+                      <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                      </tr>
+                    </thead>
+                  </div>
+
+                  
+                    <tbody>  <!--Aca se agregan los productos --> </tbody>
+
+                  </table>
+
+                  <div class="container-vaciar-carrito-btn">
+                    <button class="btn btn-secondary vaciar-carrito-btn">Vaciar Carrito</button>
+
+                  </div>
+                </div>
+            </nav>
+            
+          </div>
+          
+          <!--Contenido de productos -->
+          
+          <section class="container d-flex justify-content-evenly flex-wrap p-3 bg-dark bg-gradient container-productos">
+            
+
+        <div class="card mb-3 " style="width: 18rem; height: 300px;">
+          
+          <div class="container-img">
+
+            <img src="https://noticias-renting.aldautomotive.es/wp-content/uploads/2018/02/Mercedes_Clase_A_web-660x330.jpg" class="card-img-top" alt="car mercedez">
+
+
+          </div>  
+
+            <div class="card-body">
+              <h5 class="card-title">Mercedez</h5>
+              <p class="card-subtitle">White</p>
+              <p class="card-text">150</p>
+
+              <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary agregar" data-id="1">Agregar</i></button>
+              </div>
+
+            </div>
+
+
+            
+        </div>
+
+        
+        <div class="card mb-3" style="width: 18rem; height: 300px;">
+          <div class="container-img">
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlOGEXBPYmkYVUh1jsR-VUjgvBNsodfiV9vg&usqp=CAU" class="card-img-top" alt="car mercedez">
+          </div>
+
+            <div class="card-body">
+              <h5 class="card-title">BMW</h5>
+              <p class="card-subtitle">Gris</p>
+              <p class="card-text">200</p>
+
+              <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary agregar" data-id="2">Agregar </button>
+              </div>
+
+            </div>
+
+
+            
+        </div>
+
+        
+        <div class="card mb-3" style="width: 18rem; height: 300px;">
+          <div class="container-img">
+
+            <img src="https://maipuexclusivos.com.ar/wp-content/uploads/sites/8/2022/08/1920x1080-audi-a1-sportback-front-view-my2021-181003-1920x1080.jpg" class="card-img-top" alt="car mercedez">
+
+          </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Audi</h5>
+              <p class="card-subtitle">Negro</p>
+              <p class="card-text">300</p>
+
+              <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary agregar" data-id="3">Agregar  </button>
+              </div>
+
+            </div>
+
+
+            
+        </div>
+
+        
+        <div class="card mb-3" style="width: 18rem; height: 300px;">
+
+          <div class="container-img">
+
+            <img src="https://www.motoryracing.com/images/noticias/34000/34215/1.jpg
+            " class="card-img-top" alt="car mercedez">
+          </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Toyota</h5>
+              <p class="card-subtitle">Rojo</p>
+              <p class="card-text">100</p>
+
+              <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary agregar" data-id="4">Agregar  </button>
+              </div>
+
+            </div>
+
+
+            
+        </div>
+
+        
+        <div class="card mb-3" style="width: 18rem; height: 300px;">
+
+          <div class="container-img">
+
+            <img src=" https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/facelift_2019/homepage/families-gallery/ultimae_coupe_Compositing_4terzi_00.jpg
+            " class="card-img-top" alt="car mercedez">
+          </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Lamborghini</h5>
+              <p class="card-subtitle">Gris</p>
+              <p class="card-text">1000</p>
+
+              <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary agregar" data-id="5">Agregar  </button>
+              </div>
+
+            </div>
+
+
+            
+        </div>
+
+        
+        <div class="card mb-3" style="width: 18rem; height: 300px;">
+
+          <div class="container-img">
+
+            <img src="https://fotos.perfil.com/2022/09/17/ferrari-electrica-1421669.jpg" class="card-img-top" alt="car mercedez">
+          </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Ferrari</h5>
+              <p class="card-subtitle">Rojo</p>
+              <p class="card-text">900</p>
+
+              <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary agregar" data-id="6">Agregar  </button>
+              </div>
+
+            </div>
+
+
+            
+        </div>
+
+        <div class="card mb-3" style="width: 18rem; height: 300px;">
+
+          <div class="container-img">
+
+            <img src="https://www.autopista.es/uploads/s1/78/78/25/5/vw-golf-r-2021-la-version-mas-potente-del-compacto-deportivo.jpeg" class="card-img-top" alt="car mercedez">
+          </div>
+
+            <div class="card-body">
+              <h5 class="card-title">VolksWagen</h5>
+              <p class="card-subtitle">Azul</p>
+              <p class="card-text">500</p>
+
+              <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary agregar" data-id="7">Agregar  </button>
+              </div>
+
+            </div>
+
+
+            
+        </div>
+
+        <div class="card mb-3" style="width: 18rem; height: 300px;">
+
+          <div class="container-img">
+
+            <img src="https://www.elcarrocolombiano.com/wp-content/uploads/2020/04/20202704-MAZDA-MX5-R-SPORT-PORTADA.jpg" class="card-img-top" alt="car mercedez">
+          </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Mazda</h5>
+              <p class="card-subtitle">Gris</p>
+              <p class="card-text">400</p>
+
+              <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary agregar" data-id="8">Agregar </button>
+              </div>
+
+            </div>
+
+
+            
+        </div>
+
+        <div class="card mb-3" style="width: 18rem; height: 300px;">
+
+          <div class="container-img">
+
+            <img src="https://autotest.com.ar/wp-content/uploads/2021/08/FORD-FOCUS-ST-EDITION-2021.jpg" class="card-img-top" alt="car mercedez">
+          </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Ford</h5>
+              <p class="card-subtitle">Celeste</p>
+              <p class="card-text">700</p>
+
+              <div class="d-flex justify-content-end">
+                  <button class="btn btn-primary agregar" data-id="9">Agregar  </button>
+              </div>
+
+            </div>
+
+
+            
+        </div>
+
+
+
+        
+   
+    </section>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> <!-- Para darle las animaciones eventos de bootstrap (como la del modal)-->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+
+
+body {
+    background-color: #283453;
+}
+
+.fa-cart-shopping:hover {
+    cursor: pointer;
+}
+
+.container-productos{
+    position: relative;
+}
+
+
+
+.container-carrito {
+    width: 550px;
+    height: 400px;
+    position: absolute;
+    background-color: #212529;
+    right: 0;
+    top: 500%;
+    z-index: 1;
+    overflow: auto;
+
+    visibility: hidden; 
+     opacity: 0;
+
+    transition: all 1s;
+}
+
+
+
+.fa-sharp:hover ~  .container-carrito {
+    visibility: visible;
+    right: 0;
+    opacity: 1;
+    top: 100%;
+    transition: all 1s;
+}
+
+.container-carrito:hover {
+    visibility: visible;
+    right: 0;
+    opacity: 1;
+    top: 100%;
+}
+
+.open {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+    transition: all 0.3s;
+}
+
+table {
+    width: 100%;
+    position: relative;
+    /* height: 100%; */
+}
+
+
+.container-titulos-tabla {
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    background-color: #212529;
+    border-bottom: white solid 1px;
+}
+
+
+tbody {
+    height: 100%;
+}
+
+.container-producto-carrito{
+    max-height: 50px;
+    /* background-color: red; */
+}
+
+.container-img-carrito {
+    max-width: 95px;
+    /* max-height: 10px; */
+}
+
+.imagen-producto-carrito{   
+    width: 80%;
+    /* height: 80%; */
+    object-fit: cover;
+}
+
+.container-vaciar-carrito-btn {
+    height: 70px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid white;
+    position: sticky;
+    bottom: 0;
+    background-color: #212529;
+}
+
+.vaciar-carrito-btn {
+    width: 80%;
+}
+
+
+td, th {
+    text-align: center;
+    color: aliceblue;
+}
+
+
+.container-img {
+    width: 286px;
+    height: 143px;
+}
+
+.card-img-top{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+.btn-restar-cantidad {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: red;
+    margin-right: 5px;
+    border-radius: 25%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+    /* box-shadow: 2px 2px black;     */
+}
+
+
+
+
+@media (min-width: 1399px) {
+    .card {
+        margin-right: 30px;
+    }
+}

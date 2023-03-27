@@ -219,25 +219,4 @@ const calcularTotal = () =>  {
     }
 
 
-
-
-
-
-
-
-const containerPruebaElementosHTML = document.createElement("div");
-
-containerPruebaElementosHTML.innerHTML = `
-
-        <h1> Texto de prueba </h1>
-
-    `
-
-
-    document.body.appendChild(containerPruebaElementosHTML)
-
-
-
-    document.addEventListener("click" , () => {
-        containerPruebaElementosHTML.innerHTML = ""
-    })
+        

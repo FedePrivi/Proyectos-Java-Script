@@ -35,7 +35,10 @@ function cargarAddEventListener() {
 }
 
 
-
+(function obtenerDatosStorage() {
+    carrito = JSON.parse(localStorage.getItem( "Carrito" )) || [];
+    mostrarCarrito()
+}) ();
 
 
 
@@ -86,16 +89,23 @@ function agregarAlCarrito(imagen, nombre, precio, card) {
         })    
         carrito = [...nuevoCarrito]
         console.log(carrito);
+
+       
+
     }else{
    
-    carrito.push(auto)   // carrito.push(auto) // o tambien:  carrito = [...carrito, auto] pero deberiamos cambiar el const por let al declarar el array carrito. Porque estariamos tratandod e modificar una constante 
+    carrito.push(auto)   // carrito.push(auto) // o tambien:  carrito = [...carrito, auto] pero deberiamos cambiar el const por let al declarar el array carrito. Porque estariamos tratando de modificar una constante 
+    
+     //Agregando al Storage
+     localStorage.setItem("Carrito", JSON.stringify( carrito ) )
+
 }
      mostrarCarrito()
 }
 
 
 
-function mostrarCarrito (numPrueba) {
+function mostrarCarrito () {
     
     limpiarCarritoHTML()
 
@@ -153,7 +163,11 @@ if (carrito.length >= 1) {
     <h2 style="color: white; margin-right: 15px;">Total a pagar:</h2>
     <h3 style="color: white; margin-top: auto">${precioTotal} </h3>
     `
+    }else {
+        containerPrecioTotal.innerHTML = "";
     }
+
+
 
 }
 
@@ -190,20 +204,25 @@ function restarCantidad(e) {
 
         if (productoHTML.children[3].textContent == 1) {
                 const nuevoCarrito =  carrito.filter(auto => auto.id !==  BTN_ID)
-                filaProductoEnCarrito.removeChild(productoHTML)
                 carrito = [...nuevoCarrito]
+                // filaProductoEnCarrito.removeChild(productoHTML) 
+                mostrarCarrito()
+                //son dos alternativas esta y mostrarCarrito() para eliminar el elemento pero no hacen falta porq alfinal del if global se ejecuta mostrarCarrito con el nuevo carro, aunque llamo a la funcion para que actualize el total del precio del carrito porque al ejecutar esta funcion va a entrar al if de calcularPrecioTotal y si no existen elementos en el carrito borra el total.
             } else {
             const nuevoCarrito = carrito.map(auto => {
                 if (auto.id === BTN_ID) {
+                    //actualizar storage
+                    //
                     auto.cantidad--
                     return auto
                 }else {
                     return auto
                 }
-
+                
             })
             carrito = [...nuevoCarrito]
         }
+        localStorage.setItem( "Carrito", JSON.stringify( carrito ))
         mostrarCarrito()
         }
             
@@ -214,7 +233,7 @@ function restarCantidad(e) {
 
 
     
-const calcularTotal = () =>  {
+function calcularTotal() {
    return carrito.reduce((precioTotal, auto) => precioTotal + parseInt(auto.precio) * auto.cantidad, 0)
     }
 

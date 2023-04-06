@@ -32,13 +32,15 @@ function cargarAddEventListener() {
     containerCarrito.addEventListener("click", restarCantidad)
     
     
+//  Cargamos el Storage
+    document.addEventListener("DOMContentLoaded", () => {
+
+        carrito = JSON.parse(localStorage.getItem( "Carrito" )) || [];
+        mostrarCarrito()
+    })
+
 }
 
-
-(function obtenerDatosStorage() {
-    carrito = JSON.parse(localStorage.getItem( "Carrito" )) || [];
-    mostrarCarrito()
-}) ();
 
 
 

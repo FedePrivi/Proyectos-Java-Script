@@ -1,0 +1,19 @@
+body {
+    font-family: Georgia, serif;
+    height: 100vh;
+    background-image: linear-gradient(#e66465, #9198e5);
+}
+
+input:hover, select:hover {
+    cursor: pointer;
+}
+
+/* span:first-letter {
+    text-transform: lowercase;
+}
+
+
+span:first-letter {
+    text-transform: uppercase;
+}
+ */

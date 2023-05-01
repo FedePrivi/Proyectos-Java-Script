@@ -8,7 +8,7 @@ let tweets = [];
 
 (function leerLocalStorage() {
     // console.log("Funcion auto ejecutable");
-    console.log(localStorage.length);
+    // console.log(localStorage.length);
     if (localStorage.length >= 1) {
 
         const arrayTweetsStorage = JSON.parse(localStorage.getItem("tweets"));
@@ -88,7 +88,7 @@ tweets.forEach( tweet => {
     itemListaTweet.appendChild(eliminarTweet);
 
 
-    console.log(eliminarTweet);
+    // console.log(eliminarTweet);
     listaDeTweets.appendChild(itemListaTweet);
 
 
@@ -113,16 +113,16 @@ function limpiarLista() {
 
 
 function eliminar(id) {
-    console.log(id);
-    console.log(tweets);
-    // resultadoTweets = tweets.filter((tweet) => tweet.id !== id)
-    // tweets = resultadoTweets;
-
-    // pintarTweets()
-    // localStorage.setItem("tweets", JSON.stringify( tweets ))
+    // console.log(id);
     // console.log(tweets);
- 
+    resultadoTweets = tweets.filter((tweet) => tweet.id !== id)
+    tweets = resultadoTweets;
 
+    pintarTweets()
+    localStorage.setItem("tweets", JSON.stringify( tweets ))
+    // console.log(tweets);
+
+ 
 }
 
 //O tambien podemos...
